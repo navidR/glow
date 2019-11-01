@@ -29,3 +29,6 @@ externalbackends/*/
 .vs*
 build_*/*
 .clangd/
+CMakeLists.txt.user
+build-*/
+

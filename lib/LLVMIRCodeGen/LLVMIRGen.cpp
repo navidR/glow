@@ -125,7 +125,9 @@ void LLVMIRGen::initTargetMachine(
 
 llvm::StringRef LLVMIRGen::getBundleName() const { return bundleName_; }
 
-void LLVMIRGen::setBundleName(const std::string &name) { bundleName_ = name; }
+void LLVMIRGen::setBundleName(const std::string &name) {
+    bundleName_ = legalizeName(name);
+}
 
 std::string LLVMIRGen::getMainEntryName() const {
   return mainEntryName_.empty() ? "main" : mainEntryName_;
